@@ -1,10 +1,14 @@
 from django.contrib import admin
 
-# Register your models here.
-from deepseaweb import models as deepseaweb_models
-from django.db.models.base import ModelBase
+from .models import TblCruise, TblCollector, TblCollectionEvent, TblEnvironmental
+from .models import TblTaxonomy, TblLab, TblSample, TblLocation, TblTests
+from .models import TblSampleTests, TblResultsBulkStableIsotope, TblResultsCompSpecAaIsotope
+from .models import TblResultsFattyAcid, TblResultsFreezedry, TblResultsMercury1
+from .models import TblResultsMercury2
 
-# Very hacky! (stolen from https://www.protechtraining.com/blog/post/477)
-for name, var in deepseaweb_models.__dict__.items():
-    if type(var) is ModelBase:
-        admin.site.register(var)
+for cls in [TblCruise, TblCollector, TblCollectionEvent, TblEnvironmental,
+            TblTaxonomy, TblLab, TblSample, TblLocation, TblTests,
+            TblSampleTests, TblResultsBulkStableIsotope, TblResultsCompSpecAaIsotope,
+            TblResultsFattyAcid, TblResultsFreezedry, TblResultsMercury1,
+            TblResultsMercury2]:
+    admin.site.register(cls)

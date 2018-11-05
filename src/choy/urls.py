@@ -4,12 +4,12 @@ from django.conf.urls.static import static
 from django.urls import include, path
 import profiles.urls
 import accounts.urls
-import deepseaweb.urls
 from . import views
+import deepseaweb.urls
 
 # Personalized admin site settings like title and header
-admin.site.site_title = 'Mbari Site Admin'
-admin.site.site_header = 'Mbari Administration'
+admin.site.site_title = 'Choy Site Admin'
+admin.site.site_header = 'Choy Administration'
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),

@@ -1,5 +1,5 @@
 """
-Django settings for mbari project.
+Django settings for choy project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -58,7 +58,7 @@ if env_file.exists():
 # Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -69,18 +69,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib',
-    'django.db.models',
-    'django_extensions',
 
     'authtools',
     'crispy_forms',
     'easy_thumbnails',
+    'django_extensions',
 
     'profiles',
     'accounts',
-    'deepseaweb',
-    
+    'deepseaweb.apps.DeepseawebConfig',
 )
 
 MIDDLEWARE = [
@@ -93,9 +90,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mbari.urls'
+ROOT_URLCONF = 'choy.urls'
 
-WSGI_APPLICATION = 'mbari.wsgi.application'
+WSGI_APPLICATION = 'choy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases

@@ -7,6 +7,7 @@
 
 {% block navbar-left %}
   {% include "_navbar.html" with active_link="home" %}
+    
 {% endblock %}
 
 {% block navbar-right %}
@@ -20,12 +21,11 @@
 
 {% block splash %}
   <div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <h1>{% include "_brandname.html" %}</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-8">
-          <h1>{% include "_brandname.html" %}</h1>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-	  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
+         <!-- This block used to contain things to be displayed just below the main image -->
         </div>
         <div class="col-md-4 col-sm-4">
 
@@ -42,10 +42,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      <h2>Enter or View Data</h2>
+      <p>If you are authorized, you can view and update the Deep Sea Web database from this site.</p>
+      <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Create An Account</a>
     </div>
+    <!--
     <div class="col-lg-4">
       <h2>Heading</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -55,6 +56,7 @@
       <h2>Heading</h2>
       <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
       <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      -->
     </div>
   </div>
 </div>

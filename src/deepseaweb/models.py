@@ -133,6 +133,9 @@ class TblOriginTypes(models.Model):
     origintypeid=models.IntegerField(db_column='OriginID', primary_key=True)
     originname=models.CharField(db_column='SubsampleType', max_length=20)
 
+    def __str__(self):
+        return '%s (%d)' % (self.originname, self.origintypeid)
+
     class Meta:
         managed = True
         db_table = 'tbl_origin_types'

@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from formtools.wizard.views import SessionWizardView
 
 # Create your views here.
 
 
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 
 
 def index(request):
@@ -12,5 +11,3 @@ def index(request):
 
 def underground(request):
     return HttpResponse("This is the underground.")
-
-

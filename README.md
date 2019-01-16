@@ -2,13 +2,9 @@
 
 # mbari
 
-mbari is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+mbari is built with [Python][0] using the [Django Web Framework][1].
 
-This project has the following basic apps:
-
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+mbari is a self-contained, revision-controlled repository of all code and documentation required to install, initialize, and run both a relational database backend (supported relational databases include PostgreSQL, MySQL/Mariadb, and sqlite) as well as a graphical user interface for data-entry and administration that is accessible through a web browser.  This solution is capable of running as a remote server (i.e., accessible over a network) or locally (i.e., on a single laptop or workstation).  The code repository includes a custom-designed database schema that facillitates data validation as it is entered in the user interface.
 
 ## Installation
 
